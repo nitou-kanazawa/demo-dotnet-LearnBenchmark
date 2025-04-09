@@ -1,14 +1,19 @@
-﻿namespace MyLib;
+﻿using System;
 
-public class Caluculator
+
+namespace MyLib
 {
-  public Caluculator()
+  public class Caluculator
   {
+    public Caluculator()
+    {
 
+    }
+
+    public int Add(int x, int y)
+    {
+      return x + y;
+    }
   }
 
-  public int Add(int x, int y)
-  {
-    return x + y;
-  }
 }
