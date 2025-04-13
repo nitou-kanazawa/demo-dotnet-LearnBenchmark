@@ -2,10 +2,9 @@ using System;
 
 namespace MyTween {
 
-    public readonly struct TweenParams {
-        public readonly float duration;
-        public readonly float delay;
-
+    public readonly struct TweenParam {
+        public float Duration { get; init; }
+        public float Delay { get; init; }
     }
 
 }

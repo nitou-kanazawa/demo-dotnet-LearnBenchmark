@@ -4,12 +4,23 @@ using System.Collections.Generic;
 namespace MyTween {
 
     public interface ITween {
-        TweenParams Params { get; }
+        TweenParam Params { get; }
         void Update(float deltaTime);
     }
 
-    public sealed class Tween {
+    internal sealed class Tween : ITween {
 
+        public TweenParam Params { get; init; }
+
+        public float time;
+
+        public Tween(TweenParam param) {
+            Params = param;
+        }
+
+        public void Update(float deltaTime) {
+
+        }
     }
 
 }
