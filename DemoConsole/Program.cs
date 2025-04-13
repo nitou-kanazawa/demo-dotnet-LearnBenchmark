@@ -2,34 +2,45 @@
 using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Jobs;
+using System.Reflection.Metadata;
 
-namespace DemoConsole
-{
-  public class Program
-  {
-    static void Main(string[] args)
-    {
+namespace DemoConsole {
+  public class Program {
+    static void Main(string[] args) {
 
-      BenchmarkRunner.Run<BenchmarkTest>();
+      BenchmarkRunner.Run<PrimeBenchmarks>();
     }
   }
 
 
-  public class BenchmarkTest
-  {
-    [Benchmark]
-    public void Sleep100ms() => Thread.Sleep(100);
+  [MemoryDiagnoser]
+  [MarkdownExporter, HtmlExporter]
+  [Config(typeof(SlimConfig))]
+  public class PrimeBenchmarks {
+
+    private Calculator _calculator = new Calculator();
+
+    [Params(100_000_039, 1_000_000_007, 10_000_000_019)] // すべて素数
+    public long N;
 
     [Benchmark]
-    public void Add()
-    {
-      var calucurator = new Caluculator();
-      for (int i = 0; i < 10000; i++)
-      {
-        calucurator.Add(i, 1);
+    public bool Naive_IsPrime() => _calculator.IsPrime(N);
+
+    [Benchmark]
+    public bool Optimized_IsPrime() => _calculator.IsPrimeOptimized(N);
+
+    private class SlimConfig : ManualConfig {
+      public SlimConfig() {
+        AddJob(Job.Default
+          .WithWarmupCount(1)     // ウォームアップの回数（デフォルトは1〜5）
+          .WithIterationCount(3)  // 計測回数
+          .WithInvocationCount(1) // 1回のイテレーション内で何回メソッドを呼ぶか。
+          .WithUnrollFactor(1)    // ループの展開数
+        );
       }
     }
-
   }
 
 }

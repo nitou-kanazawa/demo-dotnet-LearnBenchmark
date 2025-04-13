@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DemoConsole.PrimeBenchmarks-20250412-155751</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.3775)
+Intel Core i7-9700K CPU 3.60GHz (Coffee Lake), 1 CPU, 8 logical and 8 physical cores
+.NET SDK 8.0.400
+  [Host]     : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+  Job-EVIRUB : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>InvocationCount=1  IterationCount=3  UnrollFactor=1  
+WarmupCount=1  
+</code></pre>
+
+<table>
+<thead><tr><th>Method     </th><th>N    </th><th>Mean      </th><th>Error    </th><th>StdDev  </th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Naive_IsPrime</td><td>10000000019</td><td>58,376,900.43 &mu;s</td><td>3,419,161.02 &mu;s</td><td>187,415.754 &mu;s</td><td>400 B</td>
+</tr><tr><td>Optimized_IsPrime</td><td>10000000019</td><td>620.00 &mu;s</td><td>55.67 &mu;s</td><td>3.051 &mu;s</td><td>400 B</td>
+</tr><tr><td>Naive_IsPrime</td><td>100000039</td><td>589,510.57 &mu;s</td><td>21,630.27 &mu;s</td><td>1,185.628 &mu;s</td><td>400 B</td>
+</tr><tr><td>Optimized_IsPrime</td><td>100000039</td><td>71.33 &mu;s</td><td>14.63 &mu;s</td><td>0.802 &mu;s</td><td>400 B</td>
+</tr><tr><td>Naive_IsPrime</td><td>1000000007</td><td>5,872,116.23 &mu;s</td><td>321,974.50 &mu;s</td><td>17,648.509 &mu;s</td><td>400 B</td>
+</tr><tr><td>Optimized_IsPrime</td><td>1000000007</td><td>202.13 &mu;s</td><td>83.21 &mu;s</td><td>4.561 &mu;s</td><td>400 B</td>
+</tr></tbody></table>
+</body>
+</html>

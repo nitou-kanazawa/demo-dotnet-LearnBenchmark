@@ -1,0 +1,33 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\obj\Release\net8.0/" /p:OutDir="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0/" /p:OutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0/" in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c
+// command took 1.21 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\obj\Release\net8.0/" /p:OutDir="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0/" /p:OutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0/" --output "C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0/" in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c
+// command took 6.02 sec and exited with 0
+// ***** Done, took 00:00:07 (7.29 sec)   *****
+// Found 6 benchmarks:
+//   PrimeBenchmarks.Naive_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000000000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000000000039]
+//   PrimeBenchmarks.Naive_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000039]
+//   PrimeBenchmarks.Naive_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Naive_IsPrime: Job-KUNIEP(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1) [N=1000000000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet c8f10839-6387-4255-b3ca-a26adc48d30c.dll --anonymousPipes 184 188 --benchmarkName "DemoConsole.PrimeBenchmarks.Naive_IsPrime(N: 1000000000039)" --job "InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1" --benchmarkId 0 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\c8f10839-6387-4255-b3ca-a26adc48d30c\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-DWFUYL(InvocationCount=1, IterationCount=1, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 212400.00 ns, 212.4000 us/op

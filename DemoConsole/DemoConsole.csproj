@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyLib\MyLib.csproj" />
+    <ProjectReference Include="..\NTween\NTween.csproj" />
   </ItemGroup>
 
   <ItemGroup>

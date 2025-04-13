@@ -1,0 +1,563 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 6 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\obj\Release\net8.0/" /p:OutDir="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0/" /p:OutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0/" in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3
+// command took 1.25 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true /p:IntermediateOutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\obj\Release\net8.0/" /p:OutDir="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0/" /p:OutputPath="C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0/" --output "C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0/" in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3
+// command took 5.97 sec and exited with 0
+// ***** Done, took 00:00:07 (7.29 sec)   *****
+// Found 6 benchmarks:
+//   PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+//   PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+//   PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+//   PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1368 1356 --benchmarkName "DemoConsole.PrimeBenchmarks.Naive_IsPrime(N: 10000000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 0 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-QFZOMZ(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 212400.00 ns, 212.4000 us/op
+WorkloadJitting  1: 1 op, 203600.00 ns, 203.6000 us/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 400.00 ns, 400.0000 ns/op
+
+OverheadActual   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  11: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  20: 1 op, 300.00 ns, 300.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 1500.00 ns, 1.5000 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1300.00 ns, 1.3000 us/op
+WorkloadActual   2: 1 op, 1300.00 ns, 1.3000 us/op
+WorkloadActual   3: 1 op, 1300.00 ns, 1.3000 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1100.00 ns, 1.1000 us/op
+WorkloadResult   2: 1 op, 1100.00 ns, 1.1000 us/op
+WorkloadResult   3: 1 op, 1100.00 ns, 1.1000 us/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 14280 has exited with code 0.
+
+Mean = 1.100 μs, StdErr = 0.000 μs (0.00%), N = 3, StdDev = 0.000 μs
+Min = 1.100 μs, Q1 = 1.100 μs, Median = 1.100 μs, Q3 = 1.100 μs, Max = 1.100 μs
+IQR = 0.000 μs, LowerFence = 1.100 μs, UpperFence = 1.100 μs
+ConfidenceInterval = [1.100 μs; 1.100 μs] (CI 99.9%), Margin = 0.000 μs (0.00% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 5 (83.3%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1412 1380 --benchmarkName "DemoConsole.PrimeBenchmarks.Optimized_IsPrime(N: 10000000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 1 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-SQPBJY(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 205300.00 ns, 205.3000 us/op
+WorkloadJitting  1: 1 op, 195100.00 ns, 195.1000 us/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadActual   3: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual   6: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   7: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 300.00 ns, 300.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 2000.00 ns, 2.0000 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1400.00 ns, 1.4000 us/op
+WorkloadActual   2: 1 op, 1300.00 ns, 1.3000 us/op
+WorkloadActual   3: 1 op, 1300.00 ns, 1.3000 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1100.00 ns, 1.1000 us/op
+WorkloadResult   2: 1 op, 1000.00 ns, 1.0000 us/op
+WorkloadResult   3: 1 op, 1000.00 ns, 1.0000 us/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 2992 has exited with code 0.
+
+Mean = 1.033 μs, StdErr = 0.033 μs (3.23%), N = 3, StdDev = 0.058 μs
+Min = 1.000 μs, Q1 = 1.000 μs, Median = 1.000 μs, Q3 = 1.050 μs, Max = 1.100 μs
+IQR = 0.050 μs, LowerFence = 0.925 μs, UpperFence = 1.125 μs
+ConfidenceInterval = [-0.020 μs; 2.087 μs] (CI 99.9%), Margin = 1.053 μs (101.93% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 4 (66.7%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1496 1328 --benchmarkName "DemoConsole.PrimeBenchmarks.Naive_IsPrime(N: 100000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 2 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ICTSWA(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 201600.00 ns, 201.6000 us/op
+WorkloadJitting  1: 1 op, 605663600.00 ns, 605.6636 ms/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   8: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  11: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 603574900.00 ns, 603.5749 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 592483000.00 ns, 592.4830 ms/op
+WorkloadActual   2: 1 op, 593454800.00 ns, 593.4548 ms/op
+WorkloadActual   3: 1 op, 592876200.00 ns, 592.8762 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 592482700.00 ns, 592.4827 ms/op
+WorkloadResult   2: 1 op, 593454500.00 ns, 593.4545 ms/op
+WorkloadResult   3: 1 op, 592875900.00 ns, 592.8759 ms/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 21896 has exited with code 0.
+
+Mean = 592.938 ms, StdErr = 0.282 ms (0.05%), N = 3, StdDev = 0.489 ms
+Min = 592.483 ms, Q1 = 592.679 ms, Median = 592.876 ms, Q3 = 593.165 ms, Max = 593.455 ms
+IQR = 0.486 ms, LowerFence = 591.950 ms, UpperFence = 593.894 ms
+ConfidenceInterval = [584.019 ms; 601.856 ms] (CI 99.9%), Margin = 8.918 ms (1.50% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 3 (50.0%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1540 1348 --benchmarkName "DemoConsole.PrimeBenchmarks.Optimized_IsPrime(N: 100000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 3 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-EQCNWP(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 195600.00 ns, 195.6000 us/op
+WorkloadJitting  1: 1 op, 418700.00 ns, 418.7000 us/op
+
+OverheadWarmup   1: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  18: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  19: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 79600.00 ns, 79.6000 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 72400.00 ns, 72.4000 us/op
+WorkloadActual   2: 1 op, 71400.00 ns, 71.4000 us/op
+WorkloadActual   3: 1 op, 70800.00 ns, 70.8000 us/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 72100.00 ns, 72.1000 us/op
+WorkloadResult   2: 1 op, 71100.00 ns, 71.1000 us/op
+WorkloadResult   3: 1 op, 70500.00 ns, 70.5000 us/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 11180 has exited with code 0.
+
+Mean = 71.233 μs, StdErr = 0.467 μs (0.66%), N = 3, StdDev = 0.808 μs
+Min = 70.500 μs, Q1 = 70.800 μs, Median = 71.100 μs, Q3 = 71.600 μs, Max = 72.100 μs
+IQR = 0.800 μs, LowerFence = 69.600 μs, UpperFence = 72.800 μs
+ConfidenceInterval = [56.487 μs; 85.980 μs] (CI 99.9%), Margin = 14.746 μs (20.70% of Mean)
+Skewness = 0.16, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 2 (33.3%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1412 1480 --benchmarkName "DemoConsole.PrimeBenchmarks.Naive_IsPrime(N: 1000000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 4 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ODZKQS(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 192000.00 ns, 192.0000 us/op
+WorkloadJitting  1: 1 op, 201300.00 ns, 201.3000 us/op
+
+OverheadWarmup   1: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   7: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  11: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadActual  12: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual  13: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual  14: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 900.00 ns, 900.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 800.00 ns, 800.0000 ns/op
+WorkloadActual   2: 1 op, 700.00 ns, 700.0000 ns/op
+WorkloadActual   3: 1 op, 600.00 ns, 600.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 500.00 ns, 500.0000 ns/op
+WorkloadResult   2: 1 op, 400.00 ns, 400.0000 ns/op
+WorkloadResult   3: 1 op, 300.00 ns, 300.0000 ns/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 5892 has exited with code 0.
+
+Mean = 400.000 ns, StdErr = 57.735 ns (14.43%), N = 3, StdDev = 100.000 ns
+Min = 300.000 ns, Q1 = 350.000 ns, Median = 400.000 ns, Q3 = 450.000 ns, Max = 500.000 ns
+IQR = 100.000 ns, LowerFence = 200.000 ns, UpperFence = 600.000 ns
+ConfidenceInterval = [-1,424.372 ns; 2,224.372 ns] (CI 99.9%), Margin = 1,824.372 ns (456.09% of Mean)
+Skewness = 0, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 1 (16.7%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// **************************
+// Benchmark: PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 876adafe-049b-4b7e-b891-eb7b7af432b3.dll --anonymousPipes 1460 1328 --benchmarkName "DemoConsole.PrimeBenchmarks.Optimized_IsPrime(N: 1000000039)" --job "InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1" --benchmarkId 5 in C:\Users\nitou\Desktop\demo-dotnet-LearnBenchmark\DemoConsole\bin\Release\net8.0\876adafe-049b-4b7e-b891-eb7b7af432b3\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.14.0
+// Runtime=.NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: Job-ORFBLS(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 197900.00 ns, 197.9000 us/op
+WorkloadJitting  1: 1 op, 218300.00 ns, 218.3000 us/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   7: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   8: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   9: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  12: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  13: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 300.00 ns, 300.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 800.00 ns, 800.0000 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadActual   2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadActual   3: 1 op, 500.00 ns, 500.0000 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 300.00 ns, 300.0000 ns/op
+WorkloadResult   2: 1 op, 300.00 ns, 300.0000 ns/op
+WorkloadResult   3: 1 op, 200.00 ns, 200.0000 ns/op
+// GC:  0 0 0 400 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 2276 has exited with code 0.
+
+Mean = 266.667 ns, StdErr = 33.333 ns (12.50%), N = 3, StdDev = 57.735 ns
+Min = 200.000 ns, Q1 = 250.000 ns, Median = 300.000 ns, Q3 = 300.000 ns, Max = 300.000 ns
+IQR = 50.000 ns, LowerFence = 175.000 ns, UpperFence = 375.000 ns
+ConfidenceInterval = [-786.635 ns; 1,319.968 ns] (CI 99.9%), Margin = 1,053.302 ns (394.99% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2025-04-12 15:50 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: 高パフォーマンス)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\DemoConsole.PrimeBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\DemoConsole.PrimeBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\DemoConsole.PrimeBenchmarks-report.html
+  BenchmarkDotNet.Artifacts\results\DemoConsole.PrimeBenchmarks-report-default.md
+
+// * Detailed results *
+PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.100 μs, StdErr = 0.000 μs (0.00%), N = 3, StdDev = 0.000 μs
+Min = 1.100 μs, Q1 = 1.100 μs, Median = 1.100 μs, Q3 = 1.100 μs, Max = 1.100 μs
+IQR = 0.000 μs, LowerFence = 1.100 μs, UpperFence = 1.100 μs
+ConfidenceInterval = [1.100 μs; 1.100 μs] (CI 99.9%), Margin = 0.000 μs (0.00% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.099 μs ; 1.101 μs) | @@@
+---------------------------------------------------
+
+PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=10000000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.033 μs, StdErr = 0.033 μs (3.23%), N = 3, StdDev = 0.058 μs
+Min = 1.000 μs, Q1 = 1.000 μs, Median = 1.000 μs, Q3 = 1.050 μs, Max = 1.100 μs
+IQR = 0.050 μs, LowerFence = 0.925 μs, UpperFence = 1.125 μs
+ConfidenceInterval = [-0.020 μs; 2.087 μs] (CI 99.9%), Margin = 1.053 μs (101.93% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[0.997 μs ; 1.103 μs) | @@@
+---------------------------------------------------
+
+PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 592.938 ms, StdErr = 0.282 ms (0.05%), N = 3, StdDev = 0.489 ms
+Min = 592.483 ms, Q1 = 592.679 ms, Median = 592.876 ms, Q3 = 593.165 ms, Max = 593.455 ms
+IQR = 0.486 ms, LowerFence = 591.950 ms, UpperFence = 593.894 ms
+ConfidenceInterval = [584.019 ms; 601.856 ms] (CI 99.9%), Margin = 8.918 ms (1.50% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[592.038 ms ; 593.899 ms) | @@@
+---------------------------------------------------
+
+PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=100000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 71.233 μs, StdErr = 0.467 μs (0.66%), N = 3, StdDev = 0.808 μs
+Min = 70.500 μs, Q1 = 70.800 μs, Median = 71.100 μs, Q3 = 71.600 μs, Max = 72.100 μs
+IQR = 0.800 μs, LowerFence = 69.600 μs, UpperFence = 72.800 μs
+ConfidenceInterval = [56.487 μs; 85.980 μs] (CI 99.9%), Margin = 14.746 μs (20.70% of Mean)
+Skewness = 0.16, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[70.064 μs ; 72.836 μs) | @@@
+---------------------------------------------------
+
+PrimeBenchmarks.Naive_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 400.000 ns, StdErr = 57.735 ns (14.43%), N = 3, StdDev = 100.000 ns
+Min = 300.000 ns, Q1 = 350.000 ns, Median = 400.000 ns, Q3 = 450.000 ns, Max = 500.000 ns
+IQR = 100.000 ns, LowerFence = 200.000 ns, UpperFence = 600.000 ns
+ConfidenceInterval = [-1,424.372 ns; 2,224.372 ns] (CI 99.9%), Margin = 1,824.372 ns (456.09% of Mean)
+Skewness = 0, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[258.996 ns ; 441.004 ns) | @@
+[441.004 ns ; 591.004 ns) | @
+---------------------------------------------------
+
+PrimeBenchmarks.Optimized_IsPrime: Job-UUZORR(InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1) [N=1000000039]
+Runtime = .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 266.667 ns, StdErr = 33.333 ns (12.50%), N = 3, StdDev = 57.735 ns
+Min = 200.000 ns, Q1 = 250.000 ns, Median = 300.000 ns, Q3 = 300.000 ns, Max = 300.000 ns
+IQR = 50.000 ns, LowerFence = 175.000 ns, UpperFence = 375.000 ns
+ConfidenceInterval = [-786.635 ns; 1,319.968 ns] (CI 99.9%), Margin = 1,053.302 ns (394.99% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[197.459 ns ; 302.541 ns) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.3775)
+Intel Core i7-9700K CPU 3.60GHz (Coffee Lake), 1 CPU, 8 logical and 8 physical cores
+.NET SDK 8.0.400
+  [Host]     : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+  Job-UUZORR : .NET 8.0.8 (8.0.824.36612), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=3  UnrollFactor=1  
+WarmupCount=1  
+
+| Method            | N           | Mean             | Error           | StdDev        | Allocated |
+|------------------ |------------ |-----------------:|----------------:|--------------:|----------:|
+| Naive_IsPrime     | 10000000039 |       1,100.0 ns |         0.00 ns |       0.00 ns |     400 B |
+| Optimized_IsPrime | 10000000039 |       1,033.3 ns |     1,053.30 ns |      57.74 ns |     400 B |
+| Naive_IsPrime     | 100000039   | 592,937,700.0 ns | 8,918,236.99 ns | 488,838.66 ns |     400 B |
+| Optimized_IsPrime | 100000039   |      71,233.3 ns |    14,746.23 ns |     808.29 ns |     400 B |
+| Naive_IsPrime     | 1000000039  |         400.0 ns |     1,824.37 ns |     100.00 ns |     400 B |
+| Optimized_IsPrime | 1000000039  |         266.7 ns |     1,053.30 ns |      57.74 ns |     400 B |
+
+// * Warnings *
+MinIterationTime
+  PrimeBenchmarks.Naive_IsPrime: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1     -> The minimum observed iteration time is 1.3μs which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PrimeBenchmarks.Optimized_IsPrime: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1 -> The minimum observed iteration time is 70.8μs which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PrimeBenchmarks.Naive_IsPrime: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1     -> The minimum observed iteration time is 600ns which is very small. It's recommended to increase it to at least 100ms using more operations.
+  PrimeBenchmarks.Optimized_IsPrime: InvocationCount=1, IterationCount=3, UnrollFactor=1, WarmupCount=1 -> The minimum observed iteration time is 500ns which is very small. It's recommended to increase it to at least 100ms using more operations.
+// * Config Issues *
+
+// * Warnings *
+Configuration
+  Summary -> The exporter HtmlExporter is already present in configuration. There may be unexpected results.
+
+// * Legends *
+  N         : Value of the 'N' parameter
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ns      : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:05 (5.33 sec), executed benchmarks: 6
+
+Global total time: 00:00:12 (12.86 sec), executed benchmarks: 6
+// * Artifacts cleanup *
+Artifacts cleanup is finished
