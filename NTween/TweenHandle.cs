@@ -4,21 +4,35 @@ namespace MyTween {
 
     public struct TweenHandle {
 
-        public int Id;
-        private ITween _tween;
+        public int Id { get; private set; }
 
-        public TweenHandle(ITween tween) {
-            _tween = tween;
+        internal TweenHandle(int id) {
+            Id = id;
         }
+
+        public bool IsEmpty() => Id < 0;
 
         public void Cancel() {
-            Relese();
+            Release();
         }
 
-        private void Relese() {
-            TweenManager.Unregister(_tween);
-            _tween = null;
+        private void Release() {
+            TweenManager.Unregister(this);
+            Id = -1;
         }
 
+        private void TryComplete() {
+            throw new NotImplementedException();
+        }
+
+        private void TryCancel() {
+            throw new NotImplementedException();
+        }
+
+
+        /// ----------------------------------------------------------------------------
+        #region Static
+        public static TweenHandle Empty() => new TweenHandle(-1);
+        #endregion
     }
 }

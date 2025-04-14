@@ -6,7 +6,7 @@ namespace NTween {
     public static class NTween {
 
         public static TweenHandle Create(float from, float to, float duration) {
-            var param = new TweenParam() {
+            var param = new TweenParameters() {
                 Duration = duration,
             };
 

@@ -5,24 +5,41 @@ namespace MyTween {
 
     internal static class TweenManager {
 
-        private static List<ITween> _items = new();
+        private static readonly Dictionary<int, ITween> _tweens = new();
+
 
         public static TweenHandle Register(ITween tween) {
-            if (_items.Contains(tween))
-                throw new InvalidOperationException();
+            if (_tweens.ContainsValue(tween))
+                throw new InvalidOperationException("Tween is already registered.");
 
-            _items.Add(tween);
+            var id = CreateId();
+            _tweens.Add(id, tween);
 
-            return new TweenHandle();
+            return new TweenHandle(id);
         }
 
-        public static void Unregister(ITween tween) {
-            if (!_items.Contains(tween))
+        public static void Unregister(TweenHandle handle) {
+            if (handle.IsEmpty())
+                throw new InvalidOperationException();
+            if (!_tweens.ContainsKey(handle.Id))
                 throw new InvalidOperationException();
 
-            _items.Remove(tween);
+            _tweens.Remove(handle.Id);
         }
 
+        internal static void Update(float deltaTime) {
+            foreach (var tween in _tweens) {
+                tween.Value.Update(deltaTime);
+            }
+        }
+
+        private static int CreateId() {
+            int nextId = 0;
+            while (_tweens.ContainsKey(nextId)) {
+                nextId++;
+            }
+            return nextId;
+        }
     }
 
 }
