@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLib.Tests", "MyLib.Tests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTween", "NTween\NTween.csproj", "{04D2178D-5C72-4EC6-AED2-E9AF1B72F3A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NTween.Tests", "NTween.Tests\NTween.Tests.csproj", "{738E4A18-8C8D-4E4F-B4CA-E7F32354F515}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{04D2178D-5C72-4EC6-AED2-E9AF1B72F3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04D2178D-5C72-4EC6-AED2-E9AF1B72F3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04D2178D-5C72-4EC6-AED2-E9AF1B72F3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738E4A18-8C8D-4E4F-B4CA-E7F32354F515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738E4A18-8C8D-4E4F-B4CA-E7F32354F515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738E4A18-8C8D-4E4F-B4CA-E7F32354F515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738E4A18-8C8D-4E4F-B4CA-E7F32354F515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

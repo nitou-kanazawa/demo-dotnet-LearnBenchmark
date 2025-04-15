@@ -1,5 +1,4 @@
 using System;
-using MyTween;
 
 namespace NTween {
 

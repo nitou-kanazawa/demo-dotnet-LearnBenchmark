@@ -1,45 +1,26 @@
 using System;
 using System.Collections.Generic;
 
-namespace MyTween {
+
+namespace NTween {
 
     internal static class TweenManager {
 
-        private static readonly Dictionary<int, ITween> _tweens = new();
+        private static readonly TweenStorage _storage = new();
 
+        public static TweenHandle Register(ITween tween) => _storage.Register(tween);
 
-        public static TweenHandle Register(ITween tween) {
-            if (_tweens.ContainsValue(tween))
-                throw new InvalidOperationException("Tween is already registered.");
-
-            var id = CreateId();
-            _tweens.Add(id, tween);
-
-            return new TweenHandle(id);
-        }
-
-        public static void Unregister(TweenHandle handle) {
-            if (handle.IsEmpty())
-                throw new InvalidOperationException();
-            if (!_tweens.ContainsKey(handle.Id))
-                throw new InvalidOperationException();
-
-            _tweens.Remove(handle.Id);
-        }
+        public static void Unregister(TweenHandle handle) => _storage.Unregister(handle);
 
         internal static void Update(float deltaTime) {
-            foreach (var tween in _tweens) {
-                tween.Value.Update(deltaTime);
+            foreach (var tween in _storage.Tweens) {
+                tween.Update(deltaTime);
             }
         }
 
-        private static int CreateId() {
-            int nextId = 0;
-            while (_tweens.ContainsKey(nextId)) {
-                nextId++;
-            }
-            return nextId;
+
+        public static bool IsActive(TweenHandle handle) {
+            return true;
         }
     }
-
 }

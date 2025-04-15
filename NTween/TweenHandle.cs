@@ -1,16 +1,49 @@
 using System;
 
-namespace MyTween {
+namespace NTween {
 
-    public struct TweenHandle {
+    // TODO キャンセル処理
+    public struct TweenHandle : IDisposable {
 
-        public int Id { get; private set; }
+        public readonly int StorageId { get; }
+
+        /// <summary> TweenのId</summary>
+        public readonly int Index { get; }
 
         internal TweenHandle(int id) {
-            Id = id;
+            Index = id;
         }
 
-        public bool IsEmpty() => Id < 0;
+        public bool IsValid() => Index >= 0;
+
+        public void Dispose() {
+            TweenManager.Unregister(this);
+        }
+
+
+        /// ----------------------------------------------------------------------------
+        #region Static
+        public static TweenHandle InValid() => new TweenHandle(-1);
+        #endregion
+    }
+
+
+    public static class TweenHandleExtensions {
+
+        public static bool IsActive(this TweenHandle handle) {
+            return TweenManager.IsActive(handle);
+        }
+
+        public static void Cancel(this TweenHandle handle) {
+        }
+    }
+}
+
+
+
+
+
+/*
 
         public void Cancel() {
             Release();
@@ -29,10 +62,4 @@ namespace MyTween {
             throw new NotImplementedException();
         }
 
-
-        /// ----------------------------------------------------------------------------
-        #region Static
-        public static TweenHandle Empty() => new TweenHandle(-1);
-        #endregion
-    }
-}
+*/

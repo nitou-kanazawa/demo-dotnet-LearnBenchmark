@@ -1,6 +1,6 @@
 using System;
 
-namespace MyTween {
+namespace NTween {
 
     public readonly struct TweenParameters {
         public float Duration { get; init; }

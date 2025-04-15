@@ -12,6 +12,10 @@ namespace NTween {
             throw new ArgumentNullException(message);
         }
 
+        public static void TweenAlreadyRegistered() {
+            throw new InvalidOperationException("Tween is already registered.");
+        }
+
         public static void TweenNotExists() {
             throw new InvalidOperationException("Tween has been destroyed or no longer exists.");
         }
