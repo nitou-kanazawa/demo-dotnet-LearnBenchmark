@@ -7,6 +7,9 @@ namespace NTween {
 
         private readonly List<ITween> _tweens = new();
 
+        /// <summary>
+        /// 
+        /// </summary>
         public IEnumerable<ITween> Tweens => _tweens;
 
 
