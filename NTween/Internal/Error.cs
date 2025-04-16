@@ -7,15 +7,8 @@ namespace NTween {
 	///
 	/// </summary>
 	internal static class Error {
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
 
 
 
